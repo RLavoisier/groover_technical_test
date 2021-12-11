@@ -35,9 +35,9 @@ Set the number of tracks you wish to see in the generated set lists. Note that t
 Default: 3 
 
 ```
--d or --premiere_duration 
+-d or --concert_premiere_length 
 ```
-Set the duration in minutes of the premiere
+Set the length in minutes of the premiere
 
 Default: 11
 
