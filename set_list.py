@@ -23,6 +23,3 @@ class SetList:
             return set(self.tracks) == set(other.tracks)
         else:
             return False
-
-    def __hash__(self):
-        return hash(tuple(sorted(self.__dict__.items())))

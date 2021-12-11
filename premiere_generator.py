@@ -90,11 +90,10 @@ class PremiereGenerator:
                     return SetList(set_list)
                 else:
                     too_long.append(sum(set_list) > concert_premiere_length + tolerance)
-            """To avoid useless loop, we return none if all the last set 
-            # are timed above concert_premiere_length + tolerance"""
+            # To avoid useless loop, we return none if all the last set
+            # are timed above concert_premiere_length + tolerance
             if too_long and all(too_long):
                 return None
-
 
     def _is_suitable(
         self, set_list: List[Track], concert_premiere_length: int, tolerance: int

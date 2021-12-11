@@ -37,7 +37,9 @@ if __name__ == "__main__":
     # ensuring args format
     try:
         nb_tracks = int(args.nb_tracks or DEFAULT_NB_TRACKS)
-        concert_premiere_length = int(args.concert_premiere_length or DEFAULT_CONCERT_PREMIERE_LENGTH)
+        concert_premiere_length = int(
+            args.concert_premiere_length or DEFAULT_CONCERT_PREMIERE_LENGTH
+        )
         tolerance = int(args.tolerance or DEFAULT_TOLERANCE)
     except ValueError:
         logger.error(
@@ -67,9 +69,7 @@ if __name__ == "__main__":
     if set_lists:
         print("*" * 60)
         for i, set in enumerate(set_lists, 1):
-            print(
-                f"{i} - {', '.join(t.name for t in set.tracks)} - {set.length}min"
-            )
+            print(f"{i} - {', '.join(t.name for t in set.tracks)} - {set.length}min")
         print("*" * 60)
     stop_time = time.perf_counter()
 
