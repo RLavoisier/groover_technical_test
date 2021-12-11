@@ -17,9 +17,3 @@ class SetList:
 
     def __repr__(self):
         return f"Set list {sum(self.tracks)}min, {self.__len__()} song(s)"
-
-    def __eq__(self, other):
-        if isinstance(other, SetList):
-            return set(self.tracks) == set(other.tracks)
-        else:
-            return False

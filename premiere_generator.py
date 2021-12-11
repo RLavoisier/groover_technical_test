@@ -55,10 +55,10 @@ class PremiereGenerator:
         """Returns a list of set_list of size nb_tracks
         and for a length that fits the premiere length with optionnal tolerance modifier
 
-        :param concert_premiere_length: max length for the 3 tracks selected
+        :param concert_premiere_length: max length for the nb_tracks tracks selected
         :param tolerance: filter a set of tracks which is total length +/- tolerance
         :param nb_tracks: number of tracks that should be contained in a set
-        :return: a list of 3 tracks suited for the premiere parameters
+        :return: a list of nb_tracks tracks suited for the premiere parameters
         """
         set_lists = self._get_set_lists(self.tracks, nb_tracks)
         filtered_set_lists = []
@@ -117,7 +117,7 @@ class PremiereGenerator:
     ) -> Iterator[List[Track]]:
         """This method build recursively the list of all the set_list from the current track list
 
-        :param track_list: the list of tracks from which set°list are generated
+        :param track_list: the list of tracks from which set_list are generated
         :param nb_tracks: the number of tracks that should be contained in a set
         :return: a list of set list of nb_tracks tracks
         """
